@@ -1,0 +1,37 @@
+.wrapper {
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.photo {
+    width: 50%;
+}
+
+.welcomeText {
+    margin-top: 200px;
+    display: flex;
+    flex-direction: column;
+}
+
+.welcomeText p {
+    font-family: "Fredoka", sans-serif;
+    font-size: 22px;
+}
+
+.shopBtn {
+    text-decoration: none;
+    background-color: cornflowerblue;
+    color: white;
+    font-family: "Fredoka", sans-serif;
+    font-weight: bold;
+    font-size: 25px;
+    margin-top: 20px;
+    padding: 5px 20px 5px 10px;
+    align-self: baseline;
+    border-top-right-radius: 20% 60%;
+    border-bottom-right-radius: 20% 60%;
+}

@@ -3,6 +3,7 @@ import Home from "./components/Home";
 import Shop from "./components/Shop";
 import Cart from "./components/Cart";
 import styles from "./App.module.css";
+import "./index.css";
 
 function App() {
   const { name } = useParams();
