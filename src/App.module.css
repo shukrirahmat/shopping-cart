@@ -1,0 +1,56 @@
+@font-face {
+    font-family: "LilitaOne";
+    src: url(assets/fonts/LilitaOne-Regular.ttf);
+}
+
+
+@font-face {
+    font-family: "Fredoka";
+    src: url(/src/assets/fonts/Fredoka-Regular.ttf),
+    url(/src/assets/fonts/Fredoka-Medium.ttf),
+    url(/src/assets/fonts/Fredoka-Bold.ttf);
+}
+
+.background {
+    background-color: white;
+    min-height: 100vh;
+}
+
+.header {
+    background-color: rgb(20, 20, 20);
+    padding: 20px 0;
+}
+
+.headWrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items:baseline;
+}
+
+.logo {
+    color: white;
+    font-family: "LilitaOne", serif;
+    font-size: 60px;
+    text-shadow: 2px 2px gray;
+}
+
+.linksWrapper {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+}
+
+.link {
+    color: white;
+    text-decoration: none;
+    font-family: "Fredoka", sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.link:hover {
+    transform: scale(110%);
+}
