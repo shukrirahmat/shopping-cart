@@ -42,3 +42,9 @@
 .link:hover {
     transform: scale(110%);
 }
+
+.errortext {
+    font-family: "Fredoka", sans-serif;
+    font-size: 20px;
+    padding: 20px;
+}
