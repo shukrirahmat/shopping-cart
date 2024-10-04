@@ -24,7 +24,7 @@
 
 .shopBtn {
     text-decoration: none;
-    background-color: cornflowerblue;
+    background-color:darkorange;
     color: white;
     font-family: "Fredoka", sans-serif;
     font-weight: bold;
@@ -34,4 +34,8 @@
     align-self: baseline;
     border-top-right-radius: 20% 60%;
     border-bottom-right-radius: 20% 60%;
+}
+
+.shopBtn:hover {
+    background-color:rgb(225, 110, 0);
 }

@@ -19,7 +19,10 @@ function useItemsData() {
         }
         return response.json();
       })
-      .then((response) => setItems(response))
+      .then((response) => {
+        console.log(response);
+        setItems(response);
+      })
       .catch((error) => setError(error))
       .finally(() => setLoading(false));
   }, []);
