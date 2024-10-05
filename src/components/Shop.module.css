@@ -27,7 +27,7 @@
 
 .categoryHead {
     font-family: "LilitaOne", serif;
-    font-size: 22px;
+    font-size: 35px;
     text-align: center;
 }
 
@@ -35,79 +35,4 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     gap: 40px;
-}
-
-.card {
-    display: grid;
-    grid-auto-flow: row;
-    grid-template-rows: 80px 250px 50px;
-    gap: 10px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    padding: 10px;
-}
-    
-
-.card img {
-    width: 90%;
-    height: 100%;
-    object-fit:contain;
-    background-color: white;
-    justify-self: center;
-}
-
-.cardTitle {
-    font-family: "Fredoka", sans-serif;
-    font-size: 14px;
-    font-weight: bold;
-    text-align: center;
-    align-self: center;
-}
-
-.priceandamount {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 10px;
-}
-
-.amount {
-    display: flex;
-    flex-direction: row;
-    height: 60%;
-}
-
-.amount button {
-    padding: 0 10px;
-    height: 100%;
-}
-
-.amount input {
-    max-width: 60px;
-    text-align: center;
-}
-
-.cardPrice {
-    font-family: "Fredoka", sans-serif;
-    font-size: 20px;
-    font-weight: bold;
-    align-self: center;
-}
-
-.addtoCart {
-    max-width: 150px;
-    margin: 0 auto;
-    padding: 10px 20px;
-    border-style: none;
-    border-radius: 5px;
-    font-family: "Fredoka", sans-serif;
-    font-size: 16px;
-    font-weight: bold;
-    background-color:darkorange;
-    color: white;
-}
-
-.addtoCart:hover {
-    background-color:rgb(225, 110, 0);
 }
