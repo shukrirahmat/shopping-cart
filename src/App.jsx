@@ -5,6 +5,7 @@ import Cart from "./components/Cart";
 import styles from "./App.module.css";
 import "./index.css";
 import { useEffect, useState } from "react";
+import cartIcon from "./assets/icons/cart-outline.svg"
 
 function useItemsData() {
   const [items, setItems] = useState([]);
@@ -20,7 +21,7 @@ function useItemsData() {
         return response.json();
       })
       .then((response) => {
-        console.log(response);
+        //console.log(response);
         setItems(response);
       })
       .catch((error) => setError(error))
@@ -50,13 +51,13 @@ function App() {
               SHOP
             </Link>
             <Link to="/cart" className={styles.link}>
-              CART
+              <img className={styles.cartIcon} src={cartIcon}/>
             </Link>
           </nav>
         </div>
       </div>
       <div>
-        {name === "shop" ? <Shop items={items} loading={loading}/> : name === "cart" ? <Cart /> : <Home />}
+        {name === "shop" ? <Shop items={items} loading={loading}/> : name === "cart" ? <Cart items={items} /> : <Home />}
       </div>
     </div>
   );

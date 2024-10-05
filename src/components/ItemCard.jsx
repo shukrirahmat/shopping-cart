@@ -23,6 +23,10 @@ function ItemCard({ item }) {
     if (amount > 1) setAmount(amount - 1);
   }
 
+  function handleAdd() {
+    //something
+  }
+
   return (
     <div className={styles.card}>
       <p className={styles.cardTitle}>{item.title}</p>
@@ -35,7 +39,7 @@ function ItemCard({ item }) {
           <button onClick={increaseAmount}>+</button>
         </div>
       </div>
-      <button className={styles.addtoCart}>ADD TO CART</button>
+      <button className={styles.addtoCart} onClick={handleAdd}>ADD TO CART</button>
     </div>
   );
 }
