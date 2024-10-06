@@ -19,7 +19,7 @@ function Shop(props) {
         <div className={styles.itemsContainer}>
           {props.items.map((item) => {
             if (item.category == "men's clothing") {
-              return <ItemCard item={item} key={item.id}/>;
+              return <ItemCard item={item} key={item.id} addToCart={props.addToCart}/>;
             }
           })}
         </div>
@@ -29,7 +29,7 @@ function Shop(props) {
         <div className={styles.itemsContainer}>
         {props.items.map((item) => {
             if (item.category == "women's clothing") {
-              return <ItemCard item={item} key={item.id}/>;
+              return <ItemCard item={item} key={item.id} addToCart={props.addToCart}/>;
             }
           })}
         </div>
@@ -39,7 +39,7 @@ function Shop(props) {
         <div className={styles.itemsContainer}>
         {props.items.map((item) => {
             if (item.category == "jewelery") {
-              return <ItemCard item={item} key={item.id}/>;
+              return <ItemCard item={item} key={item.id} addToCart={props.addToCart}/>;
             }
           })}
         </div>
@@ -49,7 +49,7 @@ function Shop(props) {
         <div className={styles.itemsContainer}>
         {props.items.map((item) => {
             if (item.category == "electronics") {
-              return <ItemCard item={item} key={item.id}/>;
+              return <ItemCard item={item} key={item.id} addToCart={props.addToCart}/>;
             }
           })}
         </div>
@@ -61,6 +61,7 @@ function Shop(props) {
 Shop.propTypes = {
   items: PropTypes.array,
   loading: PropTypes.bool,
+  addToCart: PropTypes.func,
 };
 
 export default Shop;

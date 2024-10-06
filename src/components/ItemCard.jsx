@@ -2,7 +2,7 @@ import PropTypes, { func } from "prop-types";
 import styles from "./ItemCard.module.css";
 import { useState } from "react";
 
-function ItemCard({ item }) {
+function ItemCard({ item , addToCart}) {
   const [amount, setAmount] = useState(1);
 
   function changeAmount(e) {
@@ -24,7 +24,7 @@ function ItemCard({ item }) {
   }
 
   function handleAdd() {
-    //something
+    addToCart(item, amount);
   }
 
   return (
@@ -46,6 +46,7 @@ function ItemCard({ item }) {
 
 ItemCard.proptypes = {
   item: PropTypes.object,
+  addToCart: PropTypes.func,
 };
 
 export default ItemCard;

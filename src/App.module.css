@@ -51,7 +51,22 @@
     padding: 20px;
 }
 
+.cartIconWrapper {
+    position: relative;
+}
+
 .cartIcon {
     filter: invert(1);
     width: 35px;
+}
+
+.cartTotal {
+    background-color: orange;
+    position: absolute;
+    padding: 0 8px;
+    font-family: "Fredoka", sans-serif;
+    font-weight: bold;
+    border-radius: 50%;
+    bottom: 20px;
+    left: 20px;
 }

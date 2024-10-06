@@ -34,6 +34,14 @@ function useItemsData() {
 function App() {
   const { name } = useParams();
   const {items, error, loading} = useItemsData();
+  const [cartItems, setCartItems] = useState([]);
+
+  function addToCart(item, amount) {
+    const newList = cartItems.slice();
+    const addedItem = {...item, amount: amount};
+    newList.push(addedItem);
+    setCartItems(newList);
+  }
 
   if (error)
     return <p className={styles.errortext}>A network error was encountered.</p>;
@@ -51,13 +59,16 @@ function App() {
               SHOP
             </Link>
             <Link to="/cart" className={styles.link}>
-              <img className={styles.cartIcon} src={cartIcon}/>
+            <div className={styles.cartIconWrapper}>
+              <img className={styles.cartIcon} src={cartIcon}></img>
+              {cartItems.length === 0? null : <p className={styles.cartTotal}>{cartItems.length}</p>}
+              </div>
             </Link>
           </nav>
         </div>
       </div>
       <div>
-        {name === "shop" ? <Shop items={items} loading={loading}/> : name === "cart" ? <Cart items={items} /> : <Home />}
+        {name === "shop" ? <Shop items={items} loading={loading} addToCart={addToCart}/> : name === "cart" ? <Cart items={items} /> : <Home />}
       </div>
     </div>
   );
