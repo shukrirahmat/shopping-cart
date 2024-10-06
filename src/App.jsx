@@ -58,6 +58,23 @@ function App() {
     setCartItems(newList);
   }
 
+  function removeItem(id) {
+    const newList = cartItems.filter((item) => item.id !== id);
+    setCartItems(newList);
+  }
+
+  function modifyAmount(id, newAmount) {
+    const newList = cartItems.map((e) => {
+      if (e.id === id) {
+        const newItem = { ...e, amount: newAmount};
+        return newItem;
+      } else {
+        return e
+      }
+    });
+    setCartItems(newList);
+  }
+
   if (error)
     return <p className={styles.errortext}>A network error was encountered.</p>;
 
@@ -88,7 +105,7 @@ function App() {
         {name === "shop" ? (
           <Shop items={items} loading={loading} addToCart={addToCart} />
         ) : name === "cart" ? (
-          <Cart cartItems={cartItems}/>
+          <Cart cartItems={cartItems} removeItem={removeItem} modifyAmount={modifyAmount}/>
         ) : (
           <Home />
         )}

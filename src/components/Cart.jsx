@@ -20,7 +20,7 @@ function Cart(props) {
       ) : (
         <div className={styles.cartContainer}>
           {props.cartItems.map((item) => {
-            return <CartItem item={item} key={item.id} />;
+            return <CartItem item={item} key={item.id} removeItem={props.removeItem} modifyAmount={props.modifyAmount}/>;
           })}
         </div>
       )}
@@ -36,6 +36,8 @@ function Cart(props) {
 
 Cart.propTypes = {
   cartItems: PropTypes.array,
+  removeItem: PropTypes.func,
+  modifyAmount: PropTypes.func
 };
 
 export default Cart;

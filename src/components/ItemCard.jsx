@@ -7,11 +7,12 @@ function ItemCard({ item , addToCart}) {
 
   function changeAmount(e) {
     const value = e.target.value.replace(/[^0-9]/g, "");
-    setAmount(value);
+    const num = parseInt(value);
+    setAmount(num);
   }
 
   function handleBlur() {
-    if (!amount) setAmount(1);
+    if (!amount || amount < 1) setAmount(1);
     if (amount > 99) setAmount(99);
   }
 
