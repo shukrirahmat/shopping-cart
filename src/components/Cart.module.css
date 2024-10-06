@@ -1,0 +1,61 @@
+.wrapper {
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.title {
+    font-family: "LilitaOne", serif;
+    font-size: 35px;
+    text-align: center;
+}
+
+.emptyText {
+    padding-top: 100px;
+    font-family: "Fredoka", sans-serif;
+    font-size: 22px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.cartContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.overall {
+    align-self: flex-end;
+    display: flex;
+    flex-direction: row;
+    gap: 100px;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.overall p {
+    font-family: "Fredoka", sans-serif;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.checkout {
+    border-style: none;
+    text-decoration: none;
+    background-color:darkorange;
+    color: white;
+    font-family: "Fredoka", sans-serif;
+    font-weight: bold;
+    font-size: 35px;
+    padding: 10px 25px 10px 15px;
+    border-top-right-radius: 20% 60%;
+    border-bottom-right-radius: 20% 60%;   
+}
+
+.checkout:hover {
+    background-color:rgb(245, 130, 0);
+    cursor: pointer;
+}

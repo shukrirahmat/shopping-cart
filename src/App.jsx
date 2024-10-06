@@ -5,7 +5,7 @@ import Cart from "./components/Cart";
 import styles from "./App.module.css";
 import "./index.css";
 import { useEffect, useState } from "react";
-import cartIcon from "./assets/icons/cart-outline.svg"
+import cartIcon from "./assets/icons/cart-outline.svg";
 
 function useItemsData() {
   const [items, setItems] = useState([]);
@@ -28,18 +28,33 @@ function useItemsData() {
       .finally(() => setLoading(false));
   }, []);
 
-  return {items, error, loading}
+  return { items, error, loading };
 }
 
 function App() {
   const { name } = useParams();
-  const {items, error, loading} = useItemsData();
+  const { items, error, loading } = useItemsData();
   const [cartItems, setCartItems] = useState([]);
 
   function addToCart(item, amount) {
-    const newList = cartItems.slice();
-    const addedItem = {...item, amount: amount};
-    newList.push(addedItem);
+    let newList = cartItems.slice();
+    let itemExist = false;
+
+    newList = newList.map((e) => {
+      if (e.id === item.id) {
+        const newamount = e.amount + amount;
+        const newItem = { ...e, amount: newamount};
+        itemExist = true;
+        return newItem;
+      } else {
+        return e
+      }
+    });
+
+    if (!itemExist) {
+      const newItem = { ...item, amount: amount };
+      newList.push(newItem);
+    }
     setCartItems(newList);
   }
 
@@ -59,16 +74,24 @@ function App() {
               SHOP
             </Link>
             <Link to="/cart" className={styles.link}>
-            <div className={styles.cartIconWrapper}>
-              <img className={styles.cartIcon} src={cartIcon}></img>
-              {cartItems.length === 0? null : <p className={styles.cartTotal}>{cartItems.length}</p>}
+              <div className={styles.cartIconWrapper}>
+                <img className={styles.cartIcon} src={cartIcon}></img>
+                {cartItems.length === 0 ? null : (
+                  <p className={styles.cartTotal}>{cartItems.length}</p>
+                )}
               </div>
             </Link>
           </nav>
         </div>
       </div>
       <div>
-        {name === "shop" ? <Shop items={items} loading={loading} addToCart={addToCart}/> : name === "cart" ? <Cart items={items} /> : <Home />}
+        {name === "shop" ? (
+          <Shop items={items} loading={loading} addToCart={addToCart} />
+        ) : name === "cart" ? (
+          <Cart cartItems={cartItems}/>
+        ) : (
+          <Home />
+        )}
       </div>
     </div>
   );

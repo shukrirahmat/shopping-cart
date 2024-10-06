@@ -27,12 +27,16 @@ function ItemCard({ item , addToCart}) {
     addToCart(item, amount);
   }
 
+  function pricetoString(price) {
+    return price.toFixed(2) + "$";
+  }
+
   return (
     <div className={styles.card}>
       <p className={styles.cardTitle}>{item.title}</p>
       <img src={item.image}></img>
       <div className={styles.priceandamount}>
-        <p className={styles.cardPrice}>{item.price}$</p>
+        <p className={styles.cardPrice}>{pricetoString(item.price * amount)}</p>
         <div className={styles.amount}>
           <button onClick={decreaseAmount}>-</button>
           <input type="text" value={amount} onBlur={handleBlur} onChange={changeAmount}></input>
