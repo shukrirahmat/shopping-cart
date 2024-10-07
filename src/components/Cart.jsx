@@ -1,6 +1,7 @@
 import styles from "./Cart.module.css";
 import PropTypes, { func } from "prop-types";
 import CartItem from "./CartItem";
+import { Link } from "react-router-dom";
 
 function Cart(props) {
 
@@ -27,7 +28,7 @@ function Cart(props) {
       {props.cartItems.length === 0 ? null : (
         <div className={styles.overall}>
             <p>Overall Total : {countOverall()} </p>
-          <button className={styles.checkout}>Checkout</button>
+          <button className={styles.checkout}><Link className={styles.cotext} to="/checkout">Checkout</Link></button>
         </div>
       )}
     </div>

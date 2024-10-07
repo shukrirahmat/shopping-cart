@@ -1,5 +1,5 @@
-
 import App from "./App";
+import Checkout from "./components/Checkout";
 import Errorpage from "./Errorpage";
 
 const routes = [
@@ -10,10 +10,16 @@ const routes = [
         children: [
             {
                 path: "/:name",
-                element: <App/>
+                element: <App/>,
+                errorElement: <Errorpage/>,
             }
         ]
     },
+    {
+        path: "/checkout",
+        element: <Checkout/>,
+        errorElement: <Errorpage/>,
+    }
 ];
 
 export default routes;

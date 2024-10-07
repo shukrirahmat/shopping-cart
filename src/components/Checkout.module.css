@@ -1,0 +1,57 @@
+.wrapper {
+    background-color:cornflowerblue;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    padding: 50px;
+    gap: 100px;
+    align-items: center;
+}
+
+.wrapper p {
+    font-family: "Fredoka", sans-serif;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.inputContainer {
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+}
+
+.inputContainer label {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-family: "Fredoka", sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.inputContainer input{
+    padding: 10px 20px;
+}
+
+.inputContainer input:disabled{
+    padding: 10px 20px;
+    background-color: white;
+}
+
+.return {
+    text-decoration: none;
+    background-color:darkorange;
+    color: white;
+    font-family: "Fredoka", sans-serif;
+    font-weight: bold;
+    font-size: 25px;
+    margin-top: 20px;
+    padding: 5px 20px 5px 10px;
+    border-top-right-radius: 20% 60%;
+    border-bottom-right-radius: 20% 60%;
+}
+
+.return:hover {
+    background-color:rgb(245, 130, 0);
+    cursor: pointer;
+}
