@@ -1,5 +1,5 @@
 import PropTypes, { func } from "prop-types";
-import styles from "./Shop.module.css";
+import styles from "../styles/Shop.module.css";
 import ItemCard from "./ItemCard";
 
 function Shop(props) {

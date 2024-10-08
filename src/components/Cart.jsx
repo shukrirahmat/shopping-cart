@@ -1,4 +1,4 @@
-import styles from "./Cart.module.css";
+import styles from "../styles/Cart.module.css";
 import PropTypes, { func } from "prop-types";
 import CartItem from "./CartItem";
 import { Link } from "react-router-dom";

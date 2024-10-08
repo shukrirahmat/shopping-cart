@@ -1,0 +1,83 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`App component > renders App page 1`] = `
+<div>
+  <div
+    class="_background_6dc87e"
+  >
+    <div
+      class="_header_6dc87e"
+    >
+      <div
+        class="_headWrapper_6dc87e"
+      >
+        <p
+          class="_logo_6dc87e"
+        >
+          Yangtze
+        </p>
+        <nav
+          class="_linksWrapper_6dc87e"
+        >
+          <a
+            class="_link_6dc87e"
+            href="/"
+          >
+            HOME
+          </a>
+          <a
+            class="_link_6dc87e"
+            href="/shop"
+          >
+            SHOP
+          </a>
+          <a
+            class="_link_6dc87e"
+            href="/cart"
+          >
+            <div
+              class="_cartIconWrapper_6dc87e"
+            >
+              <img
+                class="_cartIcon_6dc87e"
+                src="/src/assets/icons/cart-outline.svg"
+              />
+            </div>
+          </a>
+        </nav>
+      </div>
+    </div>
+    <div>
+      <div
+        class="_wrapper_b140de"
+      >
+        <img
+          alt="Store Photo"
+          class="_photo_b140de"
+          src="/src/assets/images/storephoto.jpg"
+        />
+        <div
+          class="_welcomeText_b140de"
+        >
+          <p
+            class="_title_b140de"
+          >
+            <b>
+              Shops online with fast and reliable delivery
+            </b>
+          </p>
+          <p>
+            Made from top-tier materials, check out of our high quality products! 
+          </p>
+          <a
+            class="_shopBtn_b140de"
+            href="/shop"
+          >
+            Shop now
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

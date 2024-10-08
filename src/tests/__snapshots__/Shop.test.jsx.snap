@@ -1,0 +1,58 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Shop component > renders Shop page 1`] = `
+<div>
+  <div
+    class="_wrapper_1f04d7"
+  >
+    <div
+      class="_category_1f04d7"
+    >
+      <p
+        class="_categoryHead_1f04d7"
+      >
+        Men's Clothing
+      </p>
+      <div
+        class="_itemsContainer_1f04d7"
+      />
+    </div>
+    <div
+      class="_category_1f04d7"
+    >
+      <p
+        class="_categoryHead_1f04d7"
+      >
+        Women's Clothing
+      </p>
+      <div
+        class="_itemsContainer_1f04d7"
+      />
+    </div>
+    <div
+      class="_category_1f04d7"
+    >
+      <p
+        class="_categoryHead_1f04d7"
+      >
+        Jewelery
+      </p>
+      <div
+        class="_itemsContainer_1f04d7"
+      />
+    </div>
+    <div
+      class="_category_1f04d7"
+    >
+      <p
+        class="_categoryHead_1f04d7"
+      >
+        Electronics
+      </p>
+      <div
+        class="_itemsContainer_1f04d7"
+      />
+    </div>
+  </div>
+</div>
+`;

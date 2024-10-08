@@ -1,0 +1,35 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Home component > renders home page 1`] = `
+<div>
+  <div
+    class="_wrapper_b140de"
+  >
+    <img
+      alt="Store Photo"
+      class="_photo_b140de"
+      src="/src/assets/images/storephoto.jpg"
+    />
+    <div
+      class="_welcomeText_b140de"
+    >
+      <p
+        class="_title_b140de"
+      >
+        <b>
+          Shops online with fast and reliable delivery
+        </b>
+      </p>
+      <p>
+        Made from top-tier materials, check out of our high quality products! 
+      </p>
+      <a
+        class="_shopBtn_b140de"
+        href="/shop"
+      >
+        Shop now
+      </a>
+    </div>
+  </div>
+</div>
+`;

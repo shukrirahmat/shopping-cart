@@ -1,4 +1,4 @@
-import styles from "./Checkout.module.css"
+import styles from "../styles/Checkout.module.css"
 import { Link } from "react-router-dom";
 
 function Checkout() {

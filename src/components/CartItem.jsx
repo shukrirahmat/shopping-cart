@@ -1,4 +1,4 @@
-import styles from "./CartItem.module.css";
+import styles from "../styles/CartItem.module.css";
 import PropTypes, { func } from "prop-types";
 
 function CartItem({ item , removeItem, modifyAmount}) {

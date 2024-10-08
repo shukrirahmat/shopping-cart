@@ -1,5 +1,5 @@
 import PropTypes, { func } from "prop-types";
-import styles from "./ItemCard.module.css";
+import styles from "../styles/ItemCard.module.css";
 import { useState } from "react";
 
 function ItemCard({ item , addToCart}) {
