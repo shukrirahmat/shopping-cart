@@ -1,0 +1,40 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Checkout component > renders checkout page 1`] = `
+<div>
+  <div
+    class="_wrapper_c6267f"
+  >
+    <p>
+      Please enter your bank account number and PIN Code:
+    </p>
+    <div
+      class="_inputContainer_c6267f"
+    >
+      <label>
+        Account number
+        <input
+          disabled=""
+          type="text"
+        />
+      </label>
+      <label>
+        PIN Code
+        <input
+          disabled=""
+          type="text"
+        />
+      </label>
+    </div>
+    <p>
+      Just kidding! You should not do that.
+    </p>
+    <a
+      class="_return_c6267f"
+      href="/"
+    >
+      Return to home
+    </a>
+  </div>
+</div>
+`;

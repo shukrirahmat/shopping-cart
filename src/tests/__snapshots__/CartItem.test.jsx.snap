@@ -1,0 +1,53 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`cart item component > renders cart item 1`] = `
+<div>
+  <div
+    class="_container_0d2c86"
+  >
+    <p
+      class="_title_0d2c86"
+    >
+      test product
+    </p>
+    <div
+      class="_imageContainer_0d2c86"
+    >
+      <img
+        src="https://i.pravatar.cc"
+      />
+    </div>
+    <div
+      class="_amount_0d2c86"
+    >
+      <button>
+        -
+      </button>
+      <input
+        type="text"
+        value="3"
+      />
+      <button>
+        +
+      </button>
+    </div>
+    <div
+      class="_priceContainer_0d2c86"
+    >
+      <p>
+        Price: 
+        13.50$
+      </p>
+      <p>
+        Total: 
+        40.50$
+      </p>
+    </div>
+    <button
+      class="_removeButton_0d2c86"
+    >
+      Remove
+    </button>
+  </div>
+</div>
+`;

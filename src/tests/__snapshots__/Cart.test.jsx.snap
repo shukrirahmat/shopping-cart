@@ -1,0 +1,222 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`cart component > renders Cart page 1`] = `
+{
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <div
+        class="_wrapper_c7a017"
+      >
+        <p
+          class="_title_c7a017"
+        >
+          Your Shopping Cart
+        </p>
+        <div
+          class="_cartContainer_c7a017"
+        >
+          <div
+            class="_container_0d2c86"
+          >
+            <p
+              class="_title_0d2c86"
+            >
+              test product
+            </p>
+            <div
+              class="_imageContainer_0d2c86"
+            >
+              <img
+                src="https://i.pravatar.cc"
+              />
+            </div>
+            <div
+              class="_amount_0d2c86"
+            >
+              <button>
+                -
+              </button>
+              <input
+                type="text"
+                value="3"
+              />
+              <button>
+                +
+              </button>
+            </div>
+            <div
+              class="_priceContainer_0d2c86"
+            >
+              <p>
+                Price: 
+                13.50$
+              </p>
+              <p>
+                Total: 
+                40.50$
+              </p>
+            </div>
+            <button
+              class="_removeButton_0d2c86"
+            >
+              Remove
+            </button>
+          </div>
+        </div>
+        <div
+          class="_overall_c7a017"
+        >
+          <p>
+            Overall Total : 
+            40.50$
+             
+          </p>
+          <button
+            class="_checkout_c7a017"
+          >
+            <a
+              class="_cotext_c7a017"
+              href="/checkout"
+            >
+              Checkout
+            </a>
+          </button>
+        </div>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="_wrapper_c7a017"
+    >
+      <p
+        class="_title_c7a017"
+      >
+        Your Shopping Cart
+      </p>
+      <div
+        class="_cartContainer_c7a017"
+      >
+        <div
+          class="_container_0d2c86"
+        >
+          <p
+            class="_title_0d2c86"
+          >
+            test product
+          </p>
+          <div
+            class="_imageContainer_0d2c86"
+          >
+            <img
+              src="https://i.pravatar.cc"
+            />
+          </div>
+          <div
+            class="_amount_0d2c86"
+          >
+            <button>
+              -
+            </button>
+            <input
+              type="text"
+              value="3"
+            />
+            <button>
+              +
+            </button>
+          </div>
+          <div
+            class="_priceContainer_0d2c86"
+          >
+            <p>
+              Price: 
+              13.50$
+            </p>
+            <p>
+              Total: 
+              40.50$
+            </p>
+          </div>
+          <button
+            class="_removeButton_0d2c86"
+          >
+            Remove
+          </button>
+        </div>
+      </div>
+      <div
+        class="_overall_c7a017"
+      >
+        <p>
+          Overall Total : 
+          40.50$
+           
+        </p>
+        <button
+          class="_checkout_c7a017"
+        >
+          <a
+            class="_cotext_c7a017"
+            href="/checkout"
+          >
+            Checkout
+          </a>
+        </button>
+      </div>
+    </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;
