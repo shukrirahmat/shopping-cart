@@ -13,7 +13,9 @@ function CartItem({ item , removeItem, modifyAmount}) {
 
   function handleChange(e) {
     const value = e.target.value.replace(/[^0-9]/g, "");
-    const num = parseInt(value);
+    let num;
+    if (!value) num = 0;
+    else num = parseInt(value);
     if (num !== item.amount) {
         modifyAmount(item.id, num);
     }

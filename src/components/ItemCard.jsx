@@ -7,7 +7,9 @@ function ItemCard({ item , addToCart}) {
 
   function changeAmount(e) {
     const value = e.target.value.replace(/[^0-9]/g, "");
-    const num = parseInt(value);
+    let num;
+    if (!value) num = 0; 
+    else num = parseInt(value);
     setAmount(num);
   }
 
@@ -37,7 +39,7 @@ function ItemCard({ item , addToCart}) {
       <p className={styles.cardTitle}>{item.title}</p>
       <img src={item.image}></img>
       <div className={styles.priceandamount}>
-        <p className={styles.cardPrice}>{pricetoString(item.price * amount)}</p>
+        <p role="priceTag" className={styles.cardPrice}>{pricetoString(item.price * amount)}</p>
         <div className={styles.amount}>
           <button onClick={decreaseAmount}>-</button>
           <input type="text" value={amount} onBlur={handleBlur} onChange={changeAmount}></input>
