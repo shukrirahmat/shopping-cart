@@ -3,43 +3,43 @@
 exports[`App component > renders App page 1`] = `
 <div>
   <div
-    class="_background_6dc87e"
+    class="_background_61351a"
   >
     <div
-      class="_header_6dc87e"
+      class="_header_61351a"
     >
       <div
-        class="_headWrapper_6dc87e"
+        class="_headWrapper_61351a"
       >
         <p
-          class="_logo_6dc87e"
+          class="_logo_61351a"
         >
           Yangtze
         </p>
         <nav
-          class="_linksWrapper_6dc87e"
+          class="_linksWrapper_61351a"
         >
           <a
-            class="_link_6dc87e"
+            class="_link_61351a"
             href="/"
           >
             HOME
           </a>
           <a
-            class="_link_6dc87e"
+            class="_link_61351a"
             href="/shop"
           >
             SHOP
           </a>
           <a
-            class="_link_6dc87e"
+            class="_link_61351a"
             href="/cart"
           >
             <div
-              class="_cartIconWrapper_6dc87e"
+              class="_cartIconWrapper_61351a"
             >
               <img
-                class="_cartIcon_6dc87e"
+                class="_cartIcon_61351a"
                 src="/src/assets/icons/cart-outline.svg"
               />
             </div>

@@ -1,39 +1,14 @@
 import { Link, useParams } from "react-router-dom";
-import Home from "./components/Home";
-import Shop from "./components/Shop";
-import Cart from "./components/Cart";
-import styles from "./App.module.css";
-import "./index.css";
+import Home from "./Home";
+import Shop from "./Shop";
+import Cart from "./Cart";
+import styles from "../styles/App.module.css";
 import { useEffect, useState } from "react";
-import cartIcon from "./assets/icons/cart-outline.svg";
+import cartIcon from "../assets/icons/cart-outline.svg";
+import "../index.css";
 
-function useItemsData() {
-  const [items, setItems] = useState([]);
-  const [error, setError] = useState(null);
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    fetch("https://fakestoreapi.com/products", { mode: "cors" })
-      .then((response) => {
-        if (response.status >= 400) {
-          throw new Error("server error");
-        }
-        return response.json();
-      })
-      .then((response) => {
-        //console.log(response);
-        setItems(response);
-      })
-      .catch((error) => setError(error))
-      .finally(() => setLoading(false));
-  }, []);
-
-  return { items, error, loading };
-}
-
-function App() {
+function App({items, error, loading}) {
   const { name } = useParams();
-  const { items, error, loading } = useItemsData();
   const [cartItems, setCartItems] = useState([]);
 
   function addToCart(item, amount) {

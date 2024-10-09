@@ -1,16 +1,17 @@
-import App from "./App";
+import Preload from "./components/Preload";
 import Checkout from "./components/Checkout";
-import Errorpage from "./Errorpage";
+import Errorpage from "./components/Errorpage";
+
 
 const routes = [
     {
         path: "/",
-        element: <App/>,
+        element: <Preload/>,
         errorElement: <Errorpage/>,
         children: [
             {
                 path: "/:name",
-                element: <App/>,
+                element: <Preload/>,
                 errorElement: <Errorpage/>,
             }
         ]
