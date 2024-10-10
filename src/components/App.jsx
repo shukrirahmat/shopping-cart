@@ -91,7 +91,7 @@ function App({items, error, loading, initialPath}) {
           </nav>
         </div>
       </div>
-      <div>
+      <div className={styles.bottom}>
         {name === "shop" ? (
           <Shop items={items} loading={loading} addToCart={addToCart} />
         ) : name === "cart" ? (

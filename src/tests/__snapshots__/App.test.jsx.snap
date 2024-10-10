@@ -47,7 +47,9 @@ exports[`App component > renders App page 1`] = `
         </nav>
       </div>
     </div>
-    <div>
+    <div
+      class="_bottom_61351a"
+    >
       <div
         class="_wrapper_b140de"
       >
