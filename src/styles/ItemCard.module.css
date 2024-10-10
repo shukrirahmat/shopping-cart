@@ -89,3 +89,9 @@
     transform: scale(105%);
     
 }
+
+.addtoCart:disabled {
+    background-color:rgba(245, 130, 0, 0.2);
+    transform: none;
+    
+}

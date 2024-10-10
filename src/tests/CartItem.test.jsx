@@ -63,44 +63,6 @@ describe("cart item component", () => {
     expect(modifyAmount).not.toHaveBeenCalled();
   });
 
-  it("should call the modify function when exiting focus with less than 1", async () => {
-    const modifyAmount = vi.fn();
-    const user = userEvent.setup();
-    render(
-      <CartItem
-        item={item}
-        key={item.id}
-        removeItem={() => {}}
-        modifyAmount={modifyAmount}
-      />
-    );
-    const input = screen.getByRole("textbox");
-
-    await user.clear(input);
-    await user.tab()
-
-    expect(modifyAmount).toHaveBeenCalled();
-  });
-
-  it("should not call the modify function when exiting focus with more than 1", async () => {
-    const modifyAmount = vi.fn();
-    const user = userEvent.setup();
-    render(
-      <CartItem
-        item={item}
-        key={item.id}
-        removeItem={() => {}}
-        modifyAmount={modifyAmount}
-      />
-    );
-    const input = screen.getByRole("textbox");
-
-    await user.click(input);
-    await user.tab()
-
-    expect(modifyAmount).not.toHaveBeenCalled();
-  });
-
   it("should call the modify function when + button is clicked", async () => {
     const modifyAmount = vi.fn();
     const user = userEvent.setup();

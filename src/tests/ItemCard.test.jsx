@@ -75,41 +75,6 @@ describe("Item card component", () => {
 
     })
 
-    it("fixes the amount when value is empty", async () => {
-        const user = userEvent.setup();
-        render(<ItemCard item={item} key={item.id} addToCart={() => {}}/>);
-        const input = screen.getByRole("textbox");
-        
-        await user.clear(input);
-        await user.tab();
-        
-        expect(input.value).toMatch(/1/);
-
-    })
-
-    it("fixes the amount when value is below 1", async () => {
-        const user = userEvent.setup();
-        render(<ItemCard item={item} key={item.id} addToCart={() => {}}/>);
-        const input = screen.getByRole("textbox");
-        
-        await user.clear(input);
-        await user.type(input, "0");
-        await user.tab();
-        
-        expect(input.value).toMatch(/1/);
-    })
-
-    it("fixes the amount when value is higher than 99", async () => {
-        const user = userEvent.setup();
-        render(<ItemCard item={item} key={item.id} addToCart={() => {}}/>);
-        const input = screen.getByRole("textbox");
-        
-        await user.clear(input);
-        await user.type(input, "1000");
-        await user.tab();
-        
-        expect(input.value).toMatch(/99/);
-    })
 
     it("should call the addToCart function when clicked", async () => {
         const addToCart = vi.fn();
@@ -120,6 +85,20 @@ describe("Item card component", () => {
         await user.click(button);
 
         expect(addToCart).toHaveBeenCalled();
+
+    })
+
+    it("should not call the addToCart function when amount less than 1", async () => {
+        const addToCart = vi.fn();
+        const user = userEvent.setup();
+        render(<ItemCard item={item} key={item.id} addToCart={addToCart}/>);
+        const input = screen.getByRole("textbox");
+        const button = screen.getByRole("button", {name: /ADD TO CART/});
+        
+        await user.clear(input);
+        await user.click(button);
+
+        expect(addToCart).not.toHaveBeenCalled();
 
     })
 

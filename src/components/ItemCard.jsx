@@ -13,11 +13,6 @@ function ItemCard({ item , addToCart}) {
     setAmount(num);
   }
 
-  function handleBlur() {
-    if (!amount || amount < 1) setAmount(1);
-    if (amount > 99) setAmount(99);
-  }
-
   function increaseAmount() {
     if (amount < 99) setAmount(amount + 1);
   }
@@ -27,7 +22,9 @@ function ItemCard({ item , addToCart}) {
   }
 
   function handleAdd() {
-    addToCart(item, amount);
+    if (amount >= 1) {
+      addToCart(item, amount);
+    }
   }
 
   function pricetoString(price) {
@@ -42,11 +39,11 @@ function ItemCard({ item , addToCart}) {
         <p role="priceTag" className={styles.cardPrice}>{pricetoString(item.price * amount)}</p>
         <div className={styles.amount}>
           <button onClick={decreaseAmount}>-</button>
-          <input type="text" value={amount} onBlur={handleBlur} onChange={changeAmount}></input>
+          <input type="text" value={amount} onChange={changeAmount}></input>
           <button onClick={increaseAmount}>+</button>
         </div>
       </div>
-      <button className={styles.addtoCart} onClick={handleAdd}>ADD TO CART</button>
+      <button className={styles.addtoCart} onClick={handleAdd} disabled={amount < 1}>ADD TO CART</button>
     </div>
   );
 }

@@ -21,10 +21,6 @@ function CartItem({ item , removeItem, modifyAmount}) {
     }
   }
 
-  function handleBlur() {
-    if (!item.amount || item.amount < 1) modifyAmount(item.id, 1);
-  }
-
   function handleAdd() {
     modifyAmount(item.id, item.amount + 1);
   }
@@ -41,7 +37,7 @@ function CartItem({ item , removeItem, modifyAmount}) {
       </div>
       <div className={styles.amount}>
         <button onClick={handleReduce}>-</button>
-        <input type="text" value={item.amount} onChange={handleChange} onBlur={handleBlur}></input>
+        <input type="text" value={item.amount} onChange={handleChange}></input>
         <button onClick={handleAdd}>+</button>
       </div>
       <div className={styles.priceContainer}>
