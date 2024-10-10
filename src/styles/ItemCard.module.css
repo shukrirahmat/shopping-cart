@@ -1,7 +1,7 @@
 .card {
     display: grid;
     grid-auto-flow: row;
-    grid-template-rows: 80px 250px 50px;
+    grid-template-rows: 80px 25vh 50px;
     gap: 10px;
     border-radius: 10px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -93,5 +93,6 @@
 .addtoCart:disabled {
     background-color:rgba(245, 130, 0, 0.2);
     transform: none;
+    cursor: default;
     
 }
