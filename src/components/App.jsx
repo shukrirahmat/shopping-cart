@@ -56,6 +56,15 @@ function App({items, error, loading, initialPath}) {
     setCartItems(newList);
   }
 
+  function countAllItems() {
+    let total = 0;
+    cartItems.forEach(i => {
+      total = total + i.amount;
+    })
+
+    return total;
+  }
+
   if (error)
     return <p className={styles.errortext}>A network error was encountered.</p>;
 
@@ -75,7 +84,7 @@ function App({items, error, loading, initialPath}) {
               <div className={styles.cartIconWrapper}>
                 <img className={styles.cartIcon} src={cartIcon}></img>
                 {cartItems.length === 0 ? null : (
-                  <p role="cartNum" className={styles.cartTotal}>{cartItems.length}</p>
+                  <p role="cartNum" className={styles.cartTotal}>{countAllItems()}</p>
                 )}
               </div>
             </Link>

@@ -28,6 +28,9 @@ describe("App component", () => {
         await user.click(button);
         const cartNum = screen.getByRole("cartNum");
         expect(cartNum.textContent).toMatch(/1/);
+        await user.click(button);
+        await user.click(button);
+        expect(cartNum.textContent).toMatch(/3/);
 
     })
 })
