@@ -6,6 +6,7 @@ import styles from "../styles/App.module.css";
 import { useEffect, useState } from "react";
 import cartIcon from "../assets/icons/cart-outline.svg";
 import "../index.css";
+import PropTypes from "prop-types";
 
 function App({items, error, loading, initialPath}) {
 
@@ -13,7 +14,7 @@ function App({items, error, loading, initialPath}) {
   if (initialPath) {
     name = initialPath;
   }
-  
+
   const [cartItems, setCartItems] = useState([]);
 
   function addToCart(item, amount) {
@@ -93,5 +94,12 @@ function App({items, error, loading, initialPath}) {
     </div>
   );
 }
+
+App.propTypes = {
+  items: PropTypes.array,
+  error: PropTypes.object,
+  loading: PropTypes.bool,
+  initialPath: PropTypes.string,
+};
 
 export default App;
