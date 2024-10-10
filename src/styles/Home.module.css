@@ -10,10 +10,12 @@
 
 .photo {
     width: 50%;
+    height: 100vh;
+    object-fit:cover;
 }
 
 .welcomeText {
-    margin-top: 200px;
+    align-self: center;
     display: flex;
     flex-direction: column;
 }
