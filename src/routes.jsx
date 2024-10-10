@@ -1,6 +1,7 @@
 import Preload from "./components/Preload";
 import Checkout from "./components/Checkout";
 import Errorpage from "./components/Errorpage";
+import App from "./components/App";
 
 
 const routes = [
@@ -11,7 +12,7 @@ const routes = [
         children: [
             {
                 path: "/:name",
-                element: <Preload/>,
+                element: <App/>,
                 errorElement: <Errorpage/>,
             }
         ]

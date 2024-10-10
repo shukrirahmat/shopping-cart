@@ -7,8 +7,13 @@ import { useEffect, useState } from "react";
 import cartIcon from "../assets/icons/cart-outline.svg";
 import "../index.css";
 
-function App({items, error, loading}) {
-  const { name } = useParams();
+function App({items, error, loading, initialPath}) {
+
+  let { name } = useParams();
+  if (initialPath) {
+    name = initialPath;
+  }
+  
   const [cartItems, setCartItems] = useState([]);
 
   function addToCart(item, amount) {
@@ -69,7 +74,7 @@ function App({items, error, loading}) {
               <div className={styles.cartIconWrapper}>
                 <img className={styles.cartIcon} src={cartIcon}></img>
                 {cartItems.length === 0 ? null : (
-                  <p className={styles.cartTotal}>{cartItems.length}</p>
+                  <p role="cartNum" className={styles.cartTotal}>{cartItems.length}</p>
                 )}
               </div>
             </Link>
